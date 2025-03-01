@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "fasten-mcp": {
+      "command": "node",
+      "args": [
+        "/Users/gauntletai/fhir-mcp/build/index.js"
+      ]
+    }
+  }
+} 

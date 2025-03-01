@@ -1,0 +1,47 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "/usr/local/bin/node",
+      "args": [
+        "/usr/local/lib/node_modules/@modelcontextprotocol/server-filesystem/dist/index.js",
+        "/Users/gauntletai/anthropicFun"
+      ]
+    },
+    "memory": {
+      "command": "/usr/local/bin/node",
+      "args": [
+        "/usr/local/lib/node_modules/@modelcontextprotocol/server-memory/dist/index.js"
+      ]
+    },
+    "brave-search": {
+      "command": "/usr/local/bin/node",
+      "args": [
+        "/usr/local/lib/node_modules/@modelcontextprotocol/server-brave-search/dist/index.js"
+      ],
+      "env": {
+        "BRAVE_API_KEY": "$BRAVE_API_KEY"
+      }
+    },
+    "github": {
+      "command": "/usr/local/bin/node",
+      "args": [
+        "/usr/local/lib/node_modules/@modelcontextprotocol/server-github/dist/index.js"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "$GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    },
+    "gmail-drive": {
+      "command": "/usr/local/bin/node",
+      "args": [
+        "/usr/local/lib/node_modules/@patruff/server-gmail-drive/dist/index.js"
+      ]
+    }
+  },
+  "llm": {
+    "model": "llama3.2:3b",
+    "baseUrl": "http://FRIENDS_IP_HERE:11434/api/generate",
+    "stream": false
+  },
+  "systemPrompt": "You are a helpful assistant that can use various tools to help answer questions. You have access to multiple MCPs including filesystem operations, GitHub interactions, Brave search, Gmail, and Google Drive. When using these tools, make sure to respect their specific requirements and limitations."
+}
