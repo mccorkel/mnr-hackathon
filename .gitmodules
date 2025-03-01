@@ -1,0 +1,6 @@
+[submodule "fhir-mcp"]
+	path = fhir-mcp
+	url = https://github.com/ryanzillini/fhir-mcp.git
+[submodule "ollama-mcp-bridge"]
+	path = ollama-mcp-bridge
+	url = https://github.com/ryanzillini/ollama-mcp-bridge.git
